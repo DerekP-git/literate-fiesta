@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intramural Registrants</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registrants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Sport</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registrant in registrants %}
+                <tr>
+                    <td>{{ registrant[0] }}</td>
+                    <td>{{ registrant[1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
