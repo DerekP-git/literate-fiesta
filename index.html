@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intramural Sports</title>
+</head>
+<body>
+    <h1>Welcome to Intramural Sports Registration!</h1>
+    <p>Are you interested in registering for Intramural Sports?</p>
+    <a href="{{ url_for('register') }}">Yes, I want to register!</a>
+    <p>Or would you like to see who has already signed up?</p>
+    <a href="{{ url_for('registrants_list') }}">See registrants</a>
+</body>
+</html>

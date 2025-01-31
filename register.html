@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Intramural Sports</title>
+</head>
+<body>
+    <h1>Register for Intramural Sports</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="sport">Select Sport:</label>
+        <select id="sport" name="sport" required>
+            {% for sport in sports %}
+                <option value="{{ sport }}">{{ sport }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
